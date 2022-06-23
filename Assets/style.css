@@ -82,4 +82,28 @@ button#randombtn {
     border-radius: 10px;
 }
 
+section.popular {
+    display: flex;
+    justify-content: space-around;
+    height: 600px;
+    align-items: center;
+}
+
+.box {
+    border: solid;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.box img {
+    width: 200px;
+}
+
+.popularheader h2 {
+    text-align: center;
+    padding-top: 80px;
+    font-size: 36px;
+}
+
 
