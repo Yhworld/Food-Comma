@@ -120,4 +120,36 @@ li.one img {
     width: 150px;
 }
 
+section.categories {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    height: 600px;
+    align-items: center;
+}
+
+.categoryheader h2 {
+    text-align: center;
+    padding-top: 80px;
+    font-size: 32px;
+    font-weight: lighter;
+}
+
+li.one {
+    list-style: none;
+    border: solid 1px #ccc;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+li.one:hover{
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+}
+
+li.one img:hover{
+    width: 200px;
+    transition-delay: 0.20s;
+}
 
