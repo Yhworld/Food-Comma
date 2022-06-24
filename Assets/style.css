@@ -89,14 +89,12 @@ section.popular {
     align-items: center;
 }
 
-.box {
-    border: solid;
-    padding: 10px 30px 10px 30px;
+.card {
     border-radius: 10px;
     text-align: center;
 }
 
-.box img {
+.card img {
     width: 200px;
 }
 
@@ -104,6 +102,22 @@ section.popular {
     text-align: center;
     padding-top: 80px;
     font-size: 36px;
+}
+
+.main {
+    background: linear-gradient(90deg, white, white 58%, #F6B400 calc(151% + 1px), #F6B400 100%);
+}
+
+li.one {
+    list-style: none;
+}
+
+section.categories {
+    display: flex;
+}
+
+li.one img {
+    width: 150px;
 }
 
 
