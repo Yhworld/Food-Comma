@@ -228,3 +228,33 @@ input#message {
     border: transparent;
 }
 
+.main {
+    display: none;
+}
+
+section.redirect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 204px;
+    text-align: center;
+}
+
+.products img {
+    width: 400px;
+}
+.title {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.title h1 {
+    font-weight: lighter;
+}
+
+.products img:hover {
+    width: 500px;
+    transition-delay: 0.40s;
+    cursor: pointer;
+}
