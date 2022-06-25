@@ -228,9 +228,6 @@ input#message {
     border: transparent;
 }
 
-.main {
-    display: none;
-}
 
 .redirect {
     display: flex;
@@ -270,6 +267,57 @@ input#message {
     text-align: center;
 }
 
-.content {
+.content2 {
     width: 810px;
+}
+
+.lunchfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 204px;
+    text-align: center;
+}
+
+.item img {
+    width: 400px;
+}
+.title {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.title h1 {
+    font-weight: lighter;
+}
+
+.item img:hover {
+    width: 500px;
+    transition-delay: 0.40s;
+    cursor: pointer;
+}
+
+.item img{
+    width: 300px;
+}
+
+
+.lunchitem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.choice1 {
+    width: 810px;
+}
+
+.mainjunk {
+    display: none;
+}
+
+.lunchMeal {
+    display: none;
 }
