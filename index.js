@@ -3,7 +3,11 @@ const fetchfood = () => {
     .then((res) => res.json())
     .then((data) => {
          getMeal(data.Meals)
-         getCategories(data.Meals)
+         getJunk(data.Meals)
+         getLunch(data.Meals)
+         getBreakfast(data.Meals)
+         getMeatk(data.Meals)
+         getSnacks(data.Meals)
     })
 }
 fetchfood();
@@ -31,7 +35,7 @@ const getMeal = (meals) => {
 
 
 
-const getCategories = (categories) => {
+const getJunk = (categories) => {
 
 
     const copyCategories = [...categories.slice(0, 2)]
@@ -95,3 +99,5 @@ const getCategories = (categories) => {
         })
     });   
 }
+
+
