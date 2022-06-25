@@ -5,9 +5,9 @@ const fetchfood = () => {
          getMeal(data.Meals)
          getJunk(data.Meals)
          getLunch(data.Meals)
-         getBreakfast(data.Meals)
-         getMeatk(data.Meals)
-         getSnacks(data.Meals)
+        /*getBreakfast(data.Meals)
+        getMeatk(data.Meals)
+         getSnacks(data.Meals)*/
     })
 }
 fetchfood();
@@ -100,4 +100,59 @@ const getJunk = (categories) => {
     });   
 }
 
+const getLunch = (categories) => {
+    const copyCategories = [...categories.slice(2, 4)]
+    copyCategories.forEach(category => {
+        let item = document.createElement("li")
+        item.className = "item" 
 
+         let lunchClick = document.getElementById("two")
+         lunchClick.addEventListener("click", () => {
+            let mainfile = document.querySelector(".mainfile")
+
+            mainfile.style.display = "none"
+
+            let lunchfile = document.querySelector(".lunchMeal")
+            lunchfile.style.display = "initial"
+        
+
+        item.innerHTML = `
+        <img src = "${category.image}">
+        <div class = "content1"> 
+        <h4>${category.name}</h4>
+        <br>
+        <p>${category.duration }mins</p>
+        `
+
+        document.querySelector(".lunchfile").appendChild(item)
+})
+
+        item.addEventListener("click", (e) => {
+            e.preventDefault()
+            let fullPage = document.querySelector(".lunchMeal");
+            fullPage.style.display = "none"
+
+            let lunchItem = document.createElement("div")
+
+            lunchItem.className = "lunchitem"
+
+
+            lunchItem.innerHTML = `
+            <img src = "${category.image}">
+            <div class = "choice1">
+            <h2>${category.name}</h2>
+            <br>
+            <h3>Description</h3>
+            <p>${category.description}</p>
+            <br>
+            <h3>Methods</h3>
+            <p>${category.method}</p>
+            <br>
+            <h3>Cooking Duration</h3>
+            <p>${category.duration} mins <p>
+              `
+            document.querySelector(".lunchh").append(lunchItem)
+
+        })
+    });   
+}
