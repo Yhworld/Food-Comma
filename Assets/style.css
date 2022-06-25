@@ -314,10 +314,68 @@ input#message {
     width: 810px;
 }
 
+
+.breakfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 204px;
+    text-align: center;
+}
+
+.breakitem {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.break img {
+    width: 300px;
+}
+
+.breakItem img {
+    width: 400px;
+}
+.title {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.title h1 {
+    font-weight: lighter;
+}
+
+.item2 img:hover {
+    width: 500px;
+    transition-delay: 0.40s;
+    cursor: pointer;
+}
+
+.item2 img{
+    width: 300px;
+}
+
+
+.breakContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.choice2 {
+    width: 810px;
+}
+
 .mainjunk {
     display: none;
 }
 
 .lunchMeal {
+    display: none;
+}
+.breakMeal {
     display: none;
 }
