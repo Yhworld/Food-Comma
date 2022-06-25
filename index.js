@@ -2,7 +2,8 @@ const fetchfood = () => {
     fetch("https://foregoing-typhoon-scissor.glitch.me/db.json")
     .then((res) => res.json())
     .then((data) => {
-        return getMeal(data.Meals)
+         getMeal(data.Meals)
+         getCategories(data.Meals)
     })
 }
 fetchfood();
@@ -26,4 +27,23 @@ const getMeal = (meals) => {
     `
     document.querySelector(".popular").appendChild(card)
     });
+}
+
+const getCategories = (categories) => {
+    const copyCategories = [...categories.slice(0, 2)]
+    copyCategories.forEach(category => {
+        let products = document.createElement("li")
+        products.className = "products" 
+        
+        products.style.listStyle = "none"
+
+        products.innerHTML = `
+        <img src = "${category.image}">
+        <div class = "content"> 
+        <h4>${category.name}</h4>
+        <br>
+        <p>${category.duration }mins</p>`
+
+        document.querySelector(".redirect").appendChild(products)
+    });   
 }
