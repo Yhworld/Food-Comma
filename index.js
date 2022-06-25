@@ -5,8 +5,8 @@ const fetchfood = () => {
          getMeal(data.Meals)
          getJunk(data.Meals)
          getLunch(data.Meals)
-        /*getBreakfast(data.Meals)
-        getMeatk(data.Meals)
+        getBreakfast(data.Meals)
+        /*getMeatk(data.Meals)
          getSnacks(data.Meals)*/
     })
 }
@@ -156,3 +156,58 @@ const getLunch = (categories) => {
         })
     });   
 }
+
+const getBreakfast = (categories) => {
+    const copyCategories = [...categories.slice(4, 6)]
+    copyCategories.forEach(category => {
+        let item2 = document.createElement("li")
+        item2.className = "item2" 
+
+        let breakClick = document.getElementById("one")
+         breakClick.addEventListener("click", () => {
+         let mainfile = document.querySelector(".mainfile")
+
+            mainfile.style.display = "none"
+
+            let breakfile = document.querySelector(".breakMeal")
+            breakfile.style.display = "initial"
+    
+        item2.innerHTML = `
+        <img src = "${category.image}">
+        <div class = "content1"> 
+        <h4>${category.name}</h4>
+        <br>
+        <p>${category.duration }mins</p>
+        `
+
+        document.querySelector(".breakfile").appendChild(item2)
+})
+
+        item2.addEventListener("click", (e) => {
+            e.preventDefault()
+            let fullPage = document.querySelector(".breakMeal");
+            fullPage.style.display = "none"
+
+            let breakItem = document.createElement("div")
+
+            breakItem.className = "breakitem"
+
+
+            breakItem.innerHTML = `
+            <img src = "${category.image}">
+            <div class = "choice2">
+            <h2>${category.name}</h2>
+            <br>
+            <h3>Description</h3>
+            <p>${category.description}</p>
+            <br>
+            <h3>Methods</h3>
+            <p>${category.method}</p>
+            <br>
+            <h3>Cooking Duration</h3>
+            <p>${category.duration} mins <p>
+              `
+            document.querySelector(".break").append(breakItem)
+
+        })
+})}
