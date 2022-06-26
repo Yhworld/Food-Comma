@@ -379,3 +379,14 @@ input#message {
 .breakMeal {
     display: none;
 }
+.steakMeal {
+    display: none;
+}
+
+li.item3 {
+    text-align: center;
+    list-style: none;
+}
+.choice3 {
+    width: 800px;
+}
