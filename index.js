@@ -5,9 +5,9 @@ const fetchfood = () => {
          getMeal(data.Meals)
          getJunk(data.Meals)
          getLunch(data.Meals)
-        getBreakfast(data.Meals)
-        /*getMeatk(data.Meals)
-         getSnacks(data.Meals)*/
+         getBreakfast(data.Meals)
+         getMeat(data.Meals)
+         //getSnacks(data.Meals)
     })
 }
 fetchfood();
@@ -211,3 +211,58 @@ const getBreakfast = (categories) => {
 
         })
 })}
+
+const getMeat = (categories) => {
+    const copyCategories = [...categories.slice(6, 7)]
+    copyCategories.forEach(category => {
+        let item3 = document.createElement("li")
+        item3.className = "item3" 
+
+        let steakClick = document.getElementById("four")
+         steakClick.addEventListener("click", () => {
+         let mainfile = document.querySelector(".mainfile")
+
+            mainfile.style.display = "none"
+
+            let steakfile = document.querySelector(".steakMeal")
+            steakfile.style.display = "initial"
+    
+        item3.innerHTML = `
+        <img src = "${category.image}">
+        <div class = "slide1"> 
+        <h4>${category.name}</h4>
+        <br>
+        <p>${category.duration }mins</p>
+        `
+
+        document.querySelector(".steakfile").appendChild(item3)
+})
+
+        item3.addEventListener("click", (e) => {
+            e.preventDefault()
+            let fullPage = document.querySelector(".steakMeal");
+            fullPage.style.display = "none"
+
+            let steakItem = document.createElement("div")
+
+            steakItem.className = "breakitem"
+
+
+            steakItem.innerHTML = `
+            <img src = "${category.image}">
+            <div class = "choice3">
+            <h2>${category.name}</h2>
+            <br>
+            <h3>Description</h3>
+            <p>${category.description}</p>
+            <br>
+            <h3>Methods</h3>
+            <p>${category.method}</p>
+            <br>
+            <h3>Cooking Duration</h3>
+            <p>${category.duration} mins <p>
+              `
+            document.querySelector(".steakk").append(steakItem)
+
+        })
+})}   
