@@ -382,6 +382,9 @@ input#message {
 .steakMeal {
     display: none;
 }
+.snackMeal {
+    display: none;
+}
 
 li.item3 {
     text-align: center;
@@ -390,3 +393,27 @@ li.item3 {
 .choice3 {
     width: 800px;
 }
+
+.snacksfile {
+    text-align: center;
+    list-style: none;
+    padding-top: 80px;
+}
+
+.snacksfile img {
+    width: 300px;
+}
+.choice4 {
+    width: 800px;
+}
+.breakitem {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.breakitem img {
+    width: 400px;
+}
+
