@@ -18,18 +18,19 @@
  - [Authors Info](#Authors-Info)
  ## Description
  <p>This project is a recipe website that allows the user to choose the recipe of their choice and return the output as the steps taken to achieve the finished meal</p>
-[Go Back to the top](# Food-Comma)
+
 ## Features
 As a user of the application,you will be able to :
 1. See a catalogue of categories on different types of food
 2. select a specific meal in the selected category. 
-[Go Back to the top](# Food-Comma)
+
+
 ## Behaviour Driven Development|
 | Behaviour      | Input        | Output       |
 | :------------- | :----------: | -----------: |
 | A user can view the available categories of food | A user can select the desired category of food, select the specific type of food in the selected category | user can view the details of the food selected and the methods of preparations and the time   |
 
-[Go Back to the top](# Food-Comma)
+
  ###  Requirements
  * Access to  a computer or any other device with internet service
  * Access to internet
@@ -39,7 +40,6 @@ As a user of the application,you will be able to :
 * Unzip the downloaded files in a folder of choice.
 * Open the index file from the zipped file with any browser.
  ****
- [Go Back to the top](# Food-Comma)
 ### Live Link
 - Click this link to view the live application https://yhworld.github.io/Food-Comma/
 - 
@@ -48,7 +48,6 @@ As a user of the application,you will be able to :
 * CSS - which was used to style the User Interface.
 * JavaScript- which was used for DOM(Document Object Manipulation) scripts.
 * Glitch - hosting the db.json file
-[Go Back to the top](# Food-Comma)
 
 ## Licence
 MIT License
@@ -72,7 +71,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-[Go Back to the top](# Food-Comma)
 ## Authors Info
 Slack Profile - [Yahya Ibrahim](https://app.slack.com/client/T077KKCG6/GLRQR61NW/user_profile/UKXCHMCNP?cdn_fallback=1)
-[Go Back to the top](# Food-Comma)
