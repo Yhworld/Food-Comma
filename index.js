@@ -7,7 +7,7 @@ const fetchfood = () => {
          getLunch(data.Meals)
          getBreakfast(data.Meals)
          getMeat(data.Meals)
-         //getSnacks(data.Meals)
+         getSnacks(data.Meals)
     })
 }
 fetchfood();
@@ -265,4 +265,59 @@ const getMeat = (categories) => {
             document.querySelector(".steakk").append(steakItem)
 
         })
-})}   
+})}
+
+const getSnacks = (categories) => {
+    const copyCategories = [...categories.slice(7, 8)]
+    copyCategories.forEach(category => {
+        let item4 = document.createElement("li")
+        item4.className = "item4" 
+
+        let snacksClick = document.getElementById("three")
+         snacksClick.addEventListener("click", () => {
+         let mainfile = document.querySelector(".mainfile")
+
+            mainfile.style.display = "none"
+
+            let snacksfile = document.querySelector(".snackMeal")
+            snacksfile.style.display = "initial"
+    
+        item4.innerHTML = `
+        <img src = "${category.image}">
+        <div class = "slide2"> 
+        <h4>${category.name}</h4>
+        <br>
+        <p>${category.duration }mins</p>
+        `
+
+        document.querySelector(".snacksfile").appendChild(item4)
+})
+
+        item4.addEventListener("click", (e) => {
+            e.preventDefault()
+            let fullPage = document.querySelector(".snackMeal");
+            fullPage.style.display = "none"
+
+            let snackItem = document.createElement("div")
+
+            snackItem.className = "breakitem"
+
+
+            snackItem.innerHTML = `
+            <img src = "${category.image}">
+            <div class = "choice4">
+            <h2>${category.name}</h2>
+            <br>
+            <h3>Description</h3>
+            <p>${category.description}</p>
+            <br>
+            <h3>Methods</h3>
+            <p>${category.method}</p>
+            <br>
+            <h3>Cooking Duration</h3>
+            <p>${category.duration} mins <p>
+              `
+            document.querySelector(".snackk").append(snackItem)
+
+        })
+})}  
